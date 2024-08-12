@@ -1,0 +1,12 @@
+.mt-5, .my-5 {
+  padding: 50px;
+  margin-top: 0.5rem !important;
+}
+
+.nav-item :hover {
+  cursor: pointer;
+}
+
+.form-group {
+  padding: 7px 0 7px 0;
+}

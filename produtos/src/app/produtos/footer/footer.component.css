@@ -1,0 +1,52 @@
+.area-footer {
+  width: auto;
+  height: auto;
+  grid-template-areas: "imagem-footer dados-pessoais redes-sociais texto-footer-1 texto-footer-2";
+  background-image: url(../../../assets/imagens/bg-footer-7.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: 0;
+}
+
+.imagem-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid gray;
+}
+
+@media (max-width: 750px) {
+
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  .area-footer {
+    display: grid;
+    grid-template-areas:
+      "item-footer"
+      "item-footer"
+      "item-footer"
+      "item-footer"
+      "item-footer";
+    padding: 10%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .imagem-footer {
+    border: none;
+    width: 180px!important;
+    height: auto;
+  }
+
+  .imagem-footer img {
+    width: 180px!important;
+    height: auto;
+  }
+
+
+}

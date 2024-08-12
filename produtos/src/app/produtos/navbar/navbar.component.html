@@ -1,0 +1,126 @@
+<header class="header" id="navbar-ancora">
+
+  <nav class="nav" *ngIf="innerWidth > 750, else menuMobile">
+
+      <!-- <a href="/" class="logo">
+          <img src="../../../assets/imagens/Logo Portfolio.png" alt="logo">
+      </a> -->
+
+      <ul class="nav-list">
+        <div class="nome-cabecalho">
+          <h2>Gestão de Produtos</h2>
+        </div>
+          <!-- <li><a href="#bloco-portfolio">Trabalhos</a></li>
+          <li><a href="#bloco-contato">Contato</a></li>
+          <li><a href="#bloco-sobre">Sobre mim</a></li> -->
+      </ul>
+
+      <!-- <div class="redes-sociais">
+        <div class="whatsapp">
+          <a href="https://api.whatsapp.com/send?phone=5534998428752&text=Ol%C3%A1%20vim%20atrav%C3%A9s%20do%20seu%20portf%C3%B3lio..." target="_blank">
+            <img
+              src="../../../assets/imagens/whatsapp.png"
+              width="30"
+              alt="Icone Whatsapp"
+            />
+          </a>
+        </div>
+        <div class="linkedin">
+          <a
+            href="https://www.linkedin.com/in/ricardo-alves-8a660428"
+            target="_blank"
+          >
+            <img
+              src="../../../assets/imagens/linkedin.png"
+              width="30"
+              alt="Icone Linkedin"
+            />
+          </a>
+        </div>
+        <div class="github">
+          <a href="https://github.com/ricardoalves21" target="_blank">
+            <img
+              src="../../../assets/imagens/github.png"
+              width="30"
+              alt="Icone Linkedin"
+            />
+          </a>
+        </div>
+      </div> -->
+
+  </nav>
+
+
+
+  <ng-template #menuMobile>
+    <nav class="navbar navbar-dark bg-dark fixed-top menu-mobile">
+      <div class="container-fluid">
+
+        <a class="navbar-brand" href="https://rical.dev.br/">
+          <img src="../../../assets/imagens/Logo Portfolio.png" alt="logo">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+
+          <div class="offcanvas-body">
+
+            <div>
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#bloco-portfolio">Trabalhos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#bloco-contato">Contato</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#bloco-sobre">Sobre mim</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="redes-sociais-mobile">
+              <div class="whatsapp">
+                <a href="https://api.whatsapp.com/send?phone=5534998428752&text=Ol%C3%A1%20vim%20atrav%C3%A9s%20do%20seu%20portf%C3%B3lio..." target="_blank">
+                  <img src="../../../assets/imagens/whatsapp.png" width="30" alt="Icone Linkedin"/>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=5534998428752&text=Ol%C3%A1%20vim%20atrav%C3%A9s%20do%20seu%20portf%C3%B3lio..." target="_blank">
+                  <p>Meu Whatsapp</p>
+                </a>
+              </div>
+              <div class="linkedin">
+                <a href="https://www.linkedin.com/in/ricardo-alves-8a660428" target="_blank">
+                  <img src="../../../assets/imagens/linkedin.png" width="30" alt="Icone Linkedin"/>
+                </a>
+                <a href="https://www.linkedin.com/in/ricardo-alves-8a660428" target="_blank">
+                  <p>Meu Linkedin</p>
+                </a>
+              </div>
+              <div class="github">
+                <a href="https://github.com/ricardoalves21" target="_blank">
+                  <img src="../../../assets/imagens/github.png" width="30" alt="Icone Linkedin"/>
+                </a>
+                <a href="https://github.com/ricardoalves21" target="_blank">
+                  <p>Meu Github</p>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </nav>
+  </ng-template>
+
+
+</header>
+
