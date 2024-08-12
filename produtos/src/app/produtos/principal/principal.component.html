@@ -40,7 +40,10 @@
             <option *ngFor="let cidade of cidades" [value]="cidade.id">{{ cidade.nome }}</option>
           </select>
         </div>
-        <button type="submit" class="btn btn-primary">Cadastrar Produto</button>
+        <div class="d-flex justify-content-end">
+          <button type="submit" class="btn btn-primary">Cadastrar Produto</button>
+        </div>
+
       </form>
     </div>
 
@@ -50,7 +53,10 @@
           <label for="cidadeNome">Nome da Cidade</label>
           <input type="text" class="form-control" id="cidadeNome" name="nome" ngModel placeholder="Nome da Cidade" required>
         </div>
-        <button type="submit" class="btn btn-primary">Cadastrar Cidade</button>
+        <div class="d-flex justify-content-end">
+          <button type="submit" class="btn btn-primary">Cadastrar Cidade</button>
+        </div>
+
       </form>
     </div>
 
@@ -58,7 +64,7 @@
       <table class="table">
         <thead class="thead-light">
           <tr>
-            <th>#</th>
+            <th>ID</th>
             <th>Nome do Produto</th>
             <th>Valor</th>
             <th>Estoque</th>

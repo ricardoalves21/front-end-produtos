@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { Cidade } from './cidade.model';
+
 
 @Injectable({
   providedIn: 'root'
@@ -12,20 +14,22 @@ export class CidadeService {
   constructor(private http: HttpClient) { }
 
     // Obter todas as cidades
-    getCidades(): Observable<any[]> {
-      return this.http.get<any[]>(this.apiUrl).pipe(
-        catchError(this.handleError) // Adiciona tratamento de erro
-      );
+    getCidades(): Observable<Cidade[]> {
+      return this.http.get<Cidade[]>(`${this.apiUrl}/listar`)
+        .pipe(
+          catchError(this.handleError)
+        );
     }
+
 
     // Criar uma nova cidade
     addCidade(cidade: any): Observable<any> {
       return this.http.post<any>(`${this.apiUrl}/criar`, cidade).pipe(
-        catchError(this.handleError) // Adiciona tratamento de erro
+        catchError(this.handleError) // Tratamento de erro
       );
     }
 
-  // Função para lidar com erros
+  // Função para tratar erros
   private handleError(error: HttpErrorResponse) {
     let errorMessage = 'Ocorreu um erro desconhecido!';
     if (error.error instanceof ErrorEvent) {

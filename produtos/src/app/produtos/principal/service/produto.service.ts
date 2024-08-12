@@ -11,21 +11,21 @@ export class ProdutoService {
 
   constructor(private http: HttpClient) { }
 
-  // Método para obter todos os produtos
+  // Obter lista de produtos
   getProdutos(): Observable<any[]> {
     return this.http.get<any[]>(`${this.apiUrl}/listar`).pipe(
       catchError(this.handleError) // Tratando erro
     );
   }
 
-  // Método para criar um novo produto
+  // Criar produto
   addProduto(produto: any): Observable<any> {
     return this.http.post<any>(`${this.apiUrl}/criar`, produto).pipe(
       catchError(this.handleError) // Tratando erro
     );
   }
 
-  // Lidando com erros
+  // Tratar erros
   private handleError(error: HttpErrorResponse) {
     let errorMessage = 'Ocorreu um erro desconhecido!';
 

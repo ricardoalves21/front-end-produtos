@@ -37,15 +37,16 @@ export class PrincipalComponent implements OnInit {
 
   loadCidades(): void {
     this.cidadeService.getCidades().subscribe(
-      (      data: any[]) => {
+      data => {
         this.cidades = data;
         this.errorMessage = ''; // Limpa a mensagem de erro em caso de sucesso
       },
-      (      error: any) => {
+      error => {
         this.errorMessage = `Erro ao carregar cidades: ${error}`;
       }
     );
   }
+
 
   cadastrarProduto(form: any): void {
     const produto = {
