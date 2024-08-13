@@ -71,7 +71,7 @@ export class PrincipalComponent implements OnInit {
         this.successMessage = 'Produto cadastrado com sucesso!';
         setTimeout(() => {
           this.refreshPage();
-        }, 3000); // Tempo para mostrar a mensagem antes de atualizar
+        }, 1500); // Tempo para mostrar a mensagem antes de atualizar
       },
       (error) => {
         this.errorMessage = 'Erro ao cadastrar produto';
@@ -86,7 +86,7 @@ export class PrincipalComponent implements OnInit {
           this.successMessage = 'Cidade cadastrada com sucesso!';
           setTimeout(() => {
             this.refreshPage();
-          }, 3000); // Tempo para mostrar a mensagem antes de atualizar
+          }, 1500); // Tempo para mostrar a mensagem antes de atualizar
         },
         (error) => {
           this.errorMessage = 'Erro ao cadastrar cidade';
