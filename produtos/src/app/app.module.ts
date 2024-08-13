@@ -13,6 +13,8 @@ import { LottieCacheModule } from 'ngx-lottie';
 import { PrincipalComponent } from './produtos/principal/principal.component';
 import { ProdutoService } from './produtos/principal/service/produto.service';
 import { CidadeService } from './produtos/principal/service/cidade.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ProdutoEditarComponent } from '../app/produtos/principal/modal/produto-editar/produto-editar.component';
 
 
 export function playerFactory() {
@@ -25,6 +27,7 @@ export function playerFactory() {
     FooterComponent,
     NavbarComponent,
     PrincipalComponent,
+    ProdutoEditarComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,9 @@ export function playerFactory() {
     HttpClientModule,
     FormsModule,
     CommonModule,
-    LottieModule.forRoot({ player: playerFactory }), LottieCacheModule.forRoot()
+    NgbModule,
+    LottieModule.forRoot({ player: playerFactory }),
+    LottieCacheModule.forRoot()
   ],
   providers: [
     ProdutoService,

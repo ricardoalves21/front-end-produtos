@@ -1,8 +1,14 @@
 <div class="container mt-5">
-  <!-- Mensagem de erro -->
-  <div *ngIf="errorMessage" class="alert alert-danger">
-    {{ errorMessage }}
-  </div>
+
+<div *ngIf="successMessage" class="alert alert-success alert-dismissible fade show" role="alert">
+  {{ successMessage }}
+  <button type="button" class="btn-close" (click)="closeAlert()" aria-label="Close"></button>
+</div>
+
+<div *ngIf="errorMessage" class="alert alert-danger alert-dismissible fade show" role="alert">
+  {{ errorMessage }}
+  <button type="button" class="btn-close" (click)="closeAlert()" aria-label="Close"></button>
+</div>
 
   <!-- Abas -->
   <ul class="nav nav-tabs">
@@ -48,11 +54,14 @@
     </div>
 
     <div *ngIf="activeTab === 'cidade'" class="mt-4">
+
       <form (ngSubmit)="cadastrarCidade(cidadeForm)" #cidadeForm="ngForm">
+
         <div class="form-group">
           <label for="cidadeNome">Nome da Cidade</label>
           <input type="text" class="form-control" id="cidadeNome" name="nome" ngModel placeholder="Nome da Cidade" required>
         </div>
+
         <div class="d-flex justify-content-end">
           <button type="submit" class="btn btn-primary">Cadastrar Cidade</button>
         </div>
@@ -69,18 +78,24 @@
             <th>Valor</th>
             <th>Estoque</th>
             <th>Cidade</th>
+            <th>Ações</th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let produto of produtos">
-            <td>{{ produto.id }}</td>
-            <td>{{ produto.nome }}</td>
-            <td>{{ produto.valor }}</td>
-            <td>{{ produto.estoque }}</td>
-            <td>{{ produto.cidade.nome }}</td>
+          <tr *ngFor="let produto of produto">
+            <td class="form-list-prod">{{ produto.id }}</td>
+            <td class="form-list-prod">{{ produto.nome }}</td>
+            <td class="form-list-prod">{{ produto.valor }}</td>
+            <td class="form-list-prod">{{ produto.estoque }}</td>
+            <td class="form-list-prod">{{ produto.cidade.nome }}</td>
+            <td>
+              <button class="btn btn-primary" (click)="abrirModal(produto)">Editar</button>
+              <button class="btn btn-danger" (click)="excluirProduto(produto.id)">Excluir</button>
+            </td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
+
 </div>

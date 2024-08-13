@@ -1,5 +1,5 @@
 .mt-5, .my-5 {
-  padding: 50px;
+  padding: 20px;
   margin-top: 0.5rem !important;
 }
 
@@ -8,9 +8,21 @@
 }
 
 .form-group {
-  padding: 7px 0 7px 0;
+  padding: 5px 0 5px 0;
 }
 
-.btn-primary {
-  margin-top: 10px;
+.btn-danger {
+  margin-left: 5px !important;
+}
+
+.form-list-prod {
+  vertical-align: middle;
+}
+
+#produtoCidade {
+  margin-bottom: 10px;
+}
+
+#cidadeNome {
+  margin-bottom: 10px;
 }

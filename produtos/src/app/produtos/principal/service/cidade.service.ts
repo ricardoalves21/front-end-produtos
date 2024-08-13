@@ -13,21 +13,21 @@ export class CidadeService {
 
   constructor(private http: HttpClient) { }
 
-    // Obter todas as cidades
-    getCidades(): Observable<Cidade[]> {
-      return this.http.get<Cidade[]>(`${this.apiUrl}/listar`)
-        .pipe(
-          catchError(this.handleError)
-        );
-    }
-
-
-    // Criar uma nova cidade
-    addCidade(cidade: any): Observable<any> {
-      return this.http.post<any>(`${this.apiUrl}/criar`, cidade).pipe(
-        catchError(this.handleError) // Tratamento de erro
+  // Obter todas as cidades
+  getCidades(): Observable<Cidade[]> {
+    return this.http.get<Cidade[]>(`${this.apiUrl}/listar`)
+      .pipe(
+        catchError(this.handleError)
       );
-    }
+  }
+
+
+  // Criar uma nova cidade
+  cadastrarCidade(cidade: Cidade): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/criar`, cidade).pipe(
+      catchError(this.handleError) // Tratamento de erro
+    );
+  }
 
   // Função para tratar erros
   private handleError(error: HttpErrorResponse) {

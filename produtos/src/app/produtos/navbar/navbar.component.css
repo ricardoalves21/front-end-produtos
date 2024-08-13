@@ -11,8 +11,7 @@ header {
     padding-inline: 16px;
     padding-block: 16px;
     border-bottom: 1px solid rgb(78, 78, 78);
-
-    background-image: url(../../../assets/imagens/bg-navbar-1.jpg);
+    background-image: url(../../../assets/imagens/bg-red.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -21,7 +20,7 @@ header {
 
 .nav {
     max-width: 1280px;
-    height: 70px;
+    height: 5rem;
     margin-inline: auto;
 
     display: flex;
