@@ -107,6 +107,8 @@ export class PrincipalComponent implements OnInit {
     );
   }
 
+
+
   abrirModal(produto: Produto | null): void {
     if (produto === null) {
       console.error('Produto não pode ser null');

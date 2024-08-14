@@ -8,4 +8,13 @@
 
 .modal-header {
   background-color: rgb(230, 230, 230);
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.modal-header>button {
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
 }

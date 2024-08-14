@@ -21,6 +21,9 @@ export class ProdutoService {
     private cidadeService: CidadeService // Injete o CidadeService
   ) { }
 
+  getApiUrl(): string {
+    return this.apiUrl;
+  }
 
   listarProdutos(): Observable<Produto[]> {
     const url = `${this.apiUrl}/listar`;
